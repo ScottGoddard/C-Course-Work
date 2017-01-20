@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sale_Price_Calculator_3_5
+namespace Time_Zone
 {
     static class Program
     {

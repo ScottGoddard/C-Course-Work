@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Sale Price Calculator")]
+[assembly: AssemblyTitle("Time Zone")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Sale Price Calculator")]
+[assembly: AssemblyProduct("Time Zone")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9b5a462c-2177-427b-9141-17179a00f2ce")]
+[assembly: Guid("adce5557-7c54-40d9-9a1f-b95499df7f57")]
 
 // Version information for an assembly consists of the following four values:
 //

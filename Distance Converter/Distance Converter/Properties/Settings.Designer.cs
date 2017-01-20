@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sale_Price_Calculator_3_5.Properties
+namespace Distance_Converter.Properties
 {
 
 

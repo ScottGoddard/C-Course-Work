@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sale_Price_Calculator.Properties
+namespace Time_Zone.Properties
 {
 
 

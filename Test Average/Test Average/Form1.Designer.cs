@@ -39,12 +39,14 @@
             this.calculateButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // test1PromptLabel
             // 
             this.test1PromptLabel.AutoSize = true;
-            this.test1PromptLabel.Location = new System.Drawing.Point(71, 47);
+            this.test1PromptLabel.Location = new System.Drawing.Point(65, 41);
             this.test1PromptLabel.Name = "test1PromptLabel";
             this.test1PromptLabel.Size = new System.Drawing.Size(37, 13);
             this.test1PromptLabel.TabIndex = 0;
@@ -53,7 +55,7 @@
             // test2PromptLabel
             // 
             this.test2PromptLabel.AutoSize = true;
-            this.test2PromptLabel.Location = new System.Drawing.Point(71, 72);
+            this.test2PromptLabel.Location = new System.Drawing.Point(65, 67);
             this.test2PromptLabel.Name = "test2PromptLabel";
             this.test2PromptLabel.Size = new System.Drawing.Size(37, 13);
             this.test2PromptLabel.TabIndex = 1;
@@ -62,7 +64,7 @@
             // test3PromptLabel
             // 
             this.test3PromptLabel.AutoSize = true;
-            this.test3PromptLabel.Location = new System.Drawing.Point(71, 97);
+            this.test3PromptLabel.Location = new System.Drawing.Point(65, 100);
             this.test3PromptLabel.Name = "test3PromptLabel";
             this.test3PromptLabel.Size = new System.Drawing.Size(37, 13);
             this.test3PromptLabel.TabIndex = 2;
@@ -71,7 +73,7 @@
             // outputDescriptionLabel
             // 
             this.outputDescriptionLabel.AutoSize = true;
-            this.outputDescriptionLabel.Location = new System.Drawing.Point(71, 128);
+            this.outputDescriptionLabel.Location = new System.Drawing.Point(-3, 133);
             this.outputDescriptionLabel.Name = "outputDescriptionLabel";
             this.outputDescriptionLabel.Size = new System.Drawing.Size(105, 13);
             this.outputDescriptionLabel.TabIndex = 3;
@@ -79,21 +81,21 @@
             // 
             // test1TextBox
             // 
-            this.test1TextBox.Location = new System.Drawing.Point(135, 44);
+            this.test1TextBox.Location = new System.Drawing.Point(117, 38);
             this.test1TextBox.Name = "test1TextBox";
             this.test1TextBox.Size = new System.Drawing.Size(100, 20);
             this.test1TextBox.TabIndex = 5;
             // 
             // test2TextBox
             // 
-            this.test2TextBox.Location = new System.Drawing.Point(135, 69);
+            this.test2TextBox.Location = new System.Drawing.Point(117, 67);
             this.test2TextBox.Name = "test2TextBox";
             this.test2TextBox.Size = new System.Drawing.Size(100, 20);
             this.test2TextBox.TabIndex = 6;
             // 
             // test3TextBox
             // 
-            this.test3TextBox.Location = new System.Drawing.Point(135, 94);
+            this.test3TextBox.Location = new System.Drawing.Point(117, 97);
             this.test3TextBox.Name = "test3TextBox";
             this.test3TextBox.Size = new System.Drawing.Size(100, 20);
             this.test3TextBox.TabIndex = 7;
@@ -101,7 +103,7 @@
             // averageLabel
             // 
             this.averageLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.averageLabel.Location = new System.Drawing.Point(182, 127);
+            this.averageLabel.Location = new System.Drawing.Point(117, 133);
             this.averageLabel.Name = "averageLabel";
             this.averageLabel.Size = new System.Drawing.Size(100, 20);
             this.averageLabel.TabIndex = 4;
@@ -109,7 +111,7 @@
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(35, 193);
+            this.calculateButton.Location = new System.Drawing.Point(6, 177);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(75, 42);
             this.calculateButton.TabIndex = 8;
@@ -119,7 +121,7 @@
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(116, 193);
+            this.clearButton.Location = new System.Drawing.Point(87, 177);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 42);
             this.clearButton.TabIndex = 9;
@@ -129,7 +131,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(197, 193);
+            this.exitButton.Location = new System.Drawing.Point(168, 177);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(76, 42);
             this.exitButton.TabIndex = 10;
@@ -137,26 +139,37 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.test1PromptLabel);
+            this.groupBox1.Controls.Add(this.test3TextBox);
+            this.groupBox1.Controls.Add(this.exitButton);
+            this.groupBox1.Controls.Add(this.test2TextBox);
+            this.groupBox1.Controls.Add(this.test1TextBox);
+            this.groupBox1.Controls.Add(this.outputDescriptionLabel);
+            this.groupBox1.Controls.Add(this.averageLabel);
+            this.groupBox1.Controls.Add(this.clearButton);
+            this.groupBox1.Controls.Add(this.calculateButton);
+            this.groupBox1.Controls.Add(this.test2PromptLabel);
+            this.groupBox1.Controls.Add(this.test3PromptLabel);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(263, 236);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Enter Three Test Scores";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(322, 283);
-            this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.clearButton);
-            this.Controls.Add(this.calculateButton);
-            this.Controls.Add(this.test3TextBox);
-            this.Controls.Add(this.test2TextBox);
-            this.Controls.Add(this.test1TextBox);
-            this.Controls.Add(this.averageLabel);
-            this.Controls.Add(this.outputDescriptionLabel);
-            this.Controls.Add(this.test3PromptLabel);
-            this.Controls.Add(this.test2PromptLabel);
-            this.Controls.Add(this.test1PromptLabel);
+            this.ClientSize = new System.Drawing.Size(296, 264);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Test Score Average";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -173,6 +186,7 @@
         private System.Windows.Forms.Button calculateButton;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
