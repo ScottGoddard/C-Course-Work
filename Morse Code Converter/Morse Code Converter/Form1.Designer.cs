@@ -33,7 +33,6 @@
             this.stringTextBox = new System.Windows.Forms.TextBox();
             this.stringPrompt = new System.Windows.Forms.Label();
             this.convertedMorseLabel = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // convertButton
@@ -48,7 +47,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(210, 142);
+            this.exitButton.Location = new System.Drawing.Point(523, 142);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 1;
@@ -58,15 +57,16 @@
             // 
             // stringTextBox
             // 
-            this.stringTextBox.Location = new System.Drawing.Point(22, 56);
+            this.stringTextBox.Location = new System.Drawing.Point(174, 63);
             this.stringTextBox.Name = "stringTextBox";
-            this.stringTextBox.Size = new System.Drawing.Size(250, 20);
+            this.stringTextBox.Size = new System.Drawing.Size(263, 20);
             this.stringTextBox.TabIndex = 2;
+            this.stringTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // stringPrompt
             // 
             this.stringPrompt.AutoSize = true;
-            this.stringPrompt.Location = new System.Drawing.Point(12, 30);
+            this.stringPrompt.Location = new System.Drawing.Point(164, 35);
             this.stringPrompt.Name = "stringPrompt";
             this.stringPrompt.Size = new System.Drawing.Size(273, 13);
             this.stringPrompt.TabIndex = 3;
@@ -75,26 +75,19 @@
             // convertedMorseLabel
             // 
             this.convertedMorseLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.convertedMorseLabel.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.convertedMorseLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.convertedMorseLabel.Location = new System.Drawing.Point(22, 100);
             this.convertedMorseLabel.Name = "convertedMorseLabel";
-            this.convertedMorseLabel.Size = new System.Drawing.Size(250, 23);
+            this.convertedMorseLabel.Size = new System.Drawing.Size(576, 23);
             this.convertedMorseLabel.TabIndex = 4;
             this.convertedMorseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(98, 188);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 342);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(628, 177);
             this.Controls.Add(this.convertedMorseLabel);
             this.Controls.Add(this.stringPrompt);
             this.Controls.Add(this.stringTextBox);
@@ -114,7 +107,6 @@
         private System.Windows.Forms.TextBox stringTextBox;
         private System.Windows.Forms.Label stringPrompt;
         private System.Windows.Forms.Label convertedMorseLabel;
-        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

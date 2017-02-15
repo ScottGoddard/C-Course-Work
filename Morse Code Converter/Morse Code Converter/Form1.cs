@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Scott Goddard
+//Feb 09, 2017 ©
+//Chapter 8 Assignment Problem 10
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +18,7 @@ namespace Morse_Code_Converter
     // Structure with character with morse code.
     struct CharatertoMorseCode
     {
-        public string character;
+        public char character;
         public string morseCode;
     }
 
@@ -39,30 +43,32 @@ namespace Morse_Code_Converter
 
                 // Create an instance of the CharacterMorseCode.
                 CharatertoMorseCode entry = new CharatertoMorseCode();
-                //morseCodeConversion = new List<CharatertoMorseCode>();
-                //morseCodeConversion.Add(new CharatertoMorseCode());
 
                 // Create a delimiter array against the comma.
-                char[] delim = { ',' };
+                char[] delim = { '*' };
 
                 // Open the file morseCode.txt
                 inputFile = File.OpenText("morseCode.txt");
-
+                
                 // Read the lines from the file.
                 while (!inputFile.EndOfStream)
                 {
                     // Read a line from the file.
                     line = inputFile.ReadLine();
+                    
+                    if (line.Trim() != string.Empty)
+                    {
+                        // Tokenize the line.
+                        string[] tokens = line.Split(delim);
 
-                    // Tokenize the line.
-                    string[] tokens = line.Split(delim);
+                        // Store the tokens in the entry object.
+                        entry.character = char.Parse(tokens[0].Trim());
+                        entry.morseCode = tokens[1].Trim();
 
-                    // Store the tokens in the entry object.
-                    entry.character= tokens[0];
-                    entry.morseCode = tokens[1];
+                        // Add the entry object to the list.
+                        morseCodeConversion.Add(entry);
+                    }
 
-                    // Add the entry object to the list.
-                    morseCodeConversion.Add(entry);
                 }
             }
             catch (Exception ex)
@@ -75,22 +81,26 @@ namespace Morse_Code_Converter
 
         private void convertButton_Click(object sender, EventArgs e)
         {
-            foreach (CharatertoMorseCode entry in morseCodeConversion)
+            // Store string in the variable.
+            string stringtext = stringTextBox.Text;
+            // Initiate variable.
+            string convertedString = string.Empty;
+
+            // Loop through each character in text box string.
+            foreach(var character in stringtext.ToUpper())
             {
-                listBox1.Items.Add(entry.character + "," + entry.morseCode);
-                string stringtext = stringTextBox.Text;
-                stringtext = stringtext.ToLower();
-                string convertChartoMorse;
-                for (int index = 0; index < stringtext.Length; index++)
+                if (character != ' ')
                 {
-                    convertedMorseLabel.Text = stringtext;
-
-
+                    // For a particular character find the morse code.
+                    convertedString += morseCodeConversion.Single(c =>
+                        c.character == character).morseCode;
                 }
-
-
-
+                // Add a space between words.
+                convertedString += " ";
+                
             }
+            // Put morse code string into label.
+            convertedMorseLabel.Text = convertedString;
         }
 
         private void exitButton_Click(object sender, EventArgs e)
