@@ -34,17 +34,20 @@
             this.phoneLabel = new System.Windows.Forms.Label();
             this.customerIDLabel = new System.Windows.Forms.Label();
             this.mailingListLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.customerIDTextBox = new System.Windows.Forms.TextBox();
             this.mailingListCheckBox = new System.Windows.Forms.CheckBox();
             this.addButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.customerPropertiesListView = new System.Windows.Forms.ListView();
+            this.nameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.addressColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.phoneNumberColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.customerIDColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.mailingListColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,33 +105,33 @@
             this.mailingListLabel.TabIndex = 5;
             this.mailingListLabel.Text = "Add to Mailing List:";
             // 
-            // textBox1
+            // nameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(108, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.nameTextBox.Location = new System.Drawing.Point(108, 30);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nameTextBox.TabIndex = 6;
             // 
-            // textBox2
+            // addressTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(108, 56);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
+            this.addressTextBox.Location = new System.Drawing.Point(108, 56);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(100, 20);
+            this.addressTextBox.TabIndex = 7;
             // 
-            // textBox3
+            // phoneNumberTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(108, 81);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(108, 81);
+            this.phoneNumberTextBox.Name = "phoneNumberTextBox";
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(100, 20);
+            this.phoneNumberTextBox.TabIndex = 8;
             // 
-            // textBox4
+            // customerIDTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(108, 106);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 9;
+            this.customerIDTextBox.Location = new System.Drawing.Point(108, 106);
+            this.customerIDTextBox.Name = "customerIDTextBox";
+            this.customerIDTextBox.Size = new System.Drawing.Size(100, 20);
+            this.customerIDTextBox.TabIndex = 9;
             // 
             // mailingListCheckBox
             // 
@@ -148,6 +151,7 @@
             this.addButton.TabIndex = 11;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // exitButton
             // 
@@ -157,45 +161,70 @@
             this.exitButton.TabIndex = 12;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // listView1
+            // customerPropertiesListView
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Name,
-            this.Address});
-            this.listView1.Location = new System.Drawing.Point(15, 21);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(253, 161);
-            this.listView1.TabIndex = 13;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.customerPropertiesListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.nameColumn,
+            this.addressColumn,
+            this.phoneNumberColumn,
+            this.customerIDColumn,
+            this.mailingListColumn});
+            this.customerPropertiesListView.Location = new System.Drawing.Point(15, 21);
+            this.customerPropertiesListView.Name = "customerPropertiesListView";
+            this.customerPropertiesListView.Size = new System.Drawing.Size(524, 161);
+            this.customerPropertiesListView.TabIndex = 13;
+            this.customerPropertiesListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // nameColumn
+            // 
+            this.nameColumn.Text = "Name";
+            this.nameColumn.Width = 110;
+            // 
+            // addressColumn
+            // 
+            this.addressColumn.Text = "Address";
+            this.addressColumn.Width = 110;
+            // 
+            // phoneNumberColumn
+            // 
+            this.phoneNumberColumn.Text = "Phone Number";
+            this.phoneNumberColumn.Width = 100;
+            // 
+            // customerIDColumn
+            // 
+            this.customerIDColumn.Text = "Customer ID";
+            this.customerIDColumn.Width = 100;
+            // 
+            // mailingListColumn
+            // 
+            this.mailingListColumn.Text = "Mailing List";
+            this.mailingListColumn.Width = 100;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.customerPropertiesListView);
             this.groupBox1.Location = new System.Drawing.Point(228, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(283, 221);
+            this.groupBox1.Size = new System.Drawing.Size(555, 221);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Object Properties";
-            // 
-            // Address
-            // 
-            this.Address.Text = "Address";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 245);
+            this.ClientSize = new System.Drawing.Size(797, 262);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.mailingListCheckBox);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.customerIDTextBox);
+            this.Controls.Add(this.phoneNumberTextBox);
+            this.Controls.Add(this.addressTextBox);
+            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.mailingListLabel);
             this.Controls.Add(this.customerIDLabel);
             this.Controls.Add(this.phoneLabel);
@@ -203,7 +232,7 @@
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.customerDataLabel);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Customers";
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -218,17 +247,20 @@
         private System.Windows.Forms.Label phoneLabel;
         private System.Windows.Forms.Label customerIDLabel;
         private System.Windows.Forms.Label mailingListLabel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.TextBox phoneNumberTextBox;
+        private System.Windows.Forms.TextBox customerIDTextBox;
         private System.Windows.Forms.CheckBox mailingListCheckBox;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader Name;
-        private System.Windows.Forms.ColumnHeader Address;
+        private System.Windows.Forms.ListView customerPropertiesListView;
+        private System.Windows.Forms.ColumnHeader nameColumn;
+        private System.Windows.Forms.ColumnHeader addressColumn;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ColumnHeader phoneNumberColumn;
+        private System.Windows.Forms.ColumnHeader customerIDColumn;
+        private System.Windows.Forms.ColumnHeader mailingListColumn;
     }
 }
 

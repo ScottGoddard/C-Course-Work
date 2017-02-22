@@ -11,14 +11,11 @@ namespace Customers
         // Fields
         private string _name;
         private string _address;
-        private int _phoneNumber;
+        private string _phoneNumber;
 
         // Constructor
-        public Person(string name, string address, int phoneNumber)
+        public Person()
         {
-            _name = name;
-            _address = address;
-            _phoneNumber = phoneNumber;
         }
 
         // Name property
@@ -36,11 +33,10 @@ namespace Customers
         }
 
         // Phone number property
-        public int PhoneNumber
+        public string PhoneNumber
         {
             get { return _phoneNumber; }
             set { _phoneNumber = value; }
         }
-
     }
 }
